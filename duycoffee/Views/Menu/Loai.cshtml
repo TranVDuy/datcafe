@@ -1,0 +1,27 @@
+﻿@model IEnumerable<duycoffee.Models.Loai>
+
+
+<li class="nav-item">
+    <a class="nav-link" id="pills-team1-tab" style="font-size: larger" href="/Menu/MenuCoffee?ma=0" >SẢN PHẨM NỔI BẬT </a>
+</li>
+
+@{
+        int i = 1;
+        foreach (var item in Model)
+        {
+
+            string id = "pills-team" + i.ToString() + "-tab";
+            string aria = "pills - team" + i;
+            
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: larger" id="@id" href="/Menu/MenuCoffee?ma=@item.MaLoai" >@item.TenLoai.ToUpper() </a>
+            </li>
+            
+
+            i++;
+        }
+
+
+}
+
+

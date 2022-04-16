@@ -1,0 +1,86 @@
+﻿@model IEnumerable<duycoffee.Models.KhachHang>
+@{
+   
+    Layout = "~/Views/LayoutCoffee/LC.cshtml";
+}
+
+<section class="w3l-about-breadcrumb">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-4 py-md-3">
+            <h2 class="title">Customer information</h2>
+        </div>
+    </div>
+</section>
+
+<table class="table" style="text-align: center">
+ 
+    @{ 
+        foreach (var item in Model)
+        {
+            if (item.Avatar == null)
+            {
+                <tr>
+                    <td></td>
+                    <td>
+                        <img src="~/Content/ThongTin/images/profile.png" style="align-content:center" alt="avatar" />
+                    </td>
+                  
+                </tr>
+            }
+            else
+            {
+                <tr>
+                    <td></td>
+                    <td>
+                        <img src="~/Content/ThongTin/images/@item.Avatar" style="width: 100px; height: 100px; align-content:center" alt="avatar" />
+                    </td>
+                  
+                </tr>
+            }
+            <tr>
+                <th>Họ Đệm: </th>
+                <td>@item.HoDem</td>
+            </tr>
+
+            <tr>
+                <th>Tên: </th>
+                <td>@item.Ten</td>
+            </tr>
+
+            <tr>
+                <th>Email: </th>
+                <td>@item.Email</td>
+            </tr>
+            <tr>
+                <th>Số Điện thoại: </th>
+                <td>@item.SoDienThoai</td>
+            </tr>
+            <tr>
+                <th>Loại thành viên: </th>
+                @{ if (item.ThanhVien == true)
+                    {
+                        <td>Fan cứng</td>  
+                    }
+
+                    else
+                    {
+                        <td>Thành viên mới</td>
+                    }
+                 }
+            </tr>
+
+            <tr>
+               
+                <td>
+                    <a href="/ThayDoi/DoiThongTin">Đổi thông tin</a>
+                </td>
+                <td><a href="/DangXuat/XuLyDangXuat" />Đăng xuất</td>
+                
+            </tr>
+        
+            
+            
+        }
+    }
+</table>
+

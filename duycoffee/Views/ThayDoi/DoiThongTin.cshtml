@@ -1,0 +1,76 @@
+﻿
+@{
+    
+    Layout = "~/Views/LayoutCoffee/LC.cshtml";
+}
+
+<section class="w3l-about-breadcrumb">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-4 py-md-3">
+            <h2 class="title">Thay đổi thông tin</h2>
+        </div>
+    </div>
+</section>
+
+
+<section class="w3l-servicesblock py-5" id="about">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="col-lg-8 about-right-faq align-self">
+                <span class="title-small mb-2">@ViewBag.tb</span>
+                <h3 class="title-big mx-0">Đổi thông tin</h3>
+
+                <form class="mt-lg-4 mt-3" action="/ThayDoi/DoiThongTin " method="post">
+                    <p>Họ đệm: </p>
+                    <input type="text" name="HoDem" /><br />
+                    <p>Tên: </p>
+                    <input type="text" name="Ten" /><br />
+                    <p>Điện thoại: </p>
+                    <input type="text" name="SoDienThoai" /><br />
+                    <p>Email: </p>
+                    <input type="text" name="Email" /><br />
+
+                    <input type="submit" class="btn btn-style btn-primary mt-lg-5 mt-4" value="Lưu" />
+                </form>
+                
+            </div>
+            <div class="col-lg-4 mt-lg-0 mt-5">
+                <img src="~/Content/assets/images/about.jpg" alt="" class="img-fluid radius-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="w3l-specification-6 py-5">
+    <!-- /specification-6-->
+    <div class="specification-6-mian py-lg-5 py-md-4 py-2">
+        <div class="container">
+            <div class="align-counter-6-inf-cols row">
+                <div class="counter-6-inf-left col-lg-6">
+
+                </div>
+                <div class="counter-6-inf-right col-lg-6" >
+                    <span class="title-small mb-2">@ViewBag.tb1</span>
+                    <h3 class="title-big">Đổi mật khẩu</h3>
+                    <form class="mt-4" action="/ThayDoi/DoiMatKhau " method="post" >
+                        <p>Tên Đăng nhập: </p>
+                        <input type="text" name="TenDangNhap" /><br />
+                        <p>Mật khẩu cũ: </p>
+                        <input type="text" name="mkcu" /><br />
+                        <p>Mật khẩu mới: </p>
+                        <input type="text" name="mkmoi" /><br />
+                        <p>Nhập lại mật khẩu: </p>
+                        <input type="text" name="nlmk" /><br />
+
+                        <input type="submit" class="btn btn-style btn-primary mt-lg-5 mt-4" value="Lưu" />
+                    </form>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- //specification-6-->
+

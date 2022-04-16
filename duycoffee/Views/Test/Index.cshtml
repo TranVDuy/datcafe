@@ -1,0 +1,28 @@
+﻿@using CaptchaMvc.HtmlHelpers
+@using CaptchaMvc;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        <form method="post" action="/Test/Index">
+            @*@Html.MathCaptcha()*@
+            @Html.Captcha(4);
+            <input type="submit" value="Sacve" />
+
+        </form>
+        @ViewBag.ErrMessage
+
+
+    </div>
+</body>
+</html>

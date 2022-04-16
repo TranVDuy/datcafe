@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "XuLyDangNhap";
+    Layout = "~/Views/LayoutCoffee/LC.cshtml";
+}
+
+
+<!DOCTYPE html>
+    <html lang="zxx">
+    <head>
+        <title>Service login form Responsive Widget Template : W3Layouts</title>
+        <!-- Meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- Google fonts -->
+        <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+        <!-- CSS Stylesheet -->
+        <link rel="stylesheet" href="~/Content/FormLogin/css/style.css" type="text/css" media="all" />
+    </head>
+<body>
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+            <div class="container py-lg-4 py-md-3">
+                <h2 class="title"></h2>
+            </div>
+        </div>
+    </section>
+
+    <div class="signinform">
+        <h1></h1>
+        <!-- container -->
+        <div class="container">
+            <!-- main content -->
+            <div class="w3l-form-info">
+                <div class="w3_info">
+                    <h2>Đăng nhập</h2>
+                    <form action="/DangNhap/XuLyDangNhap" method="post">
+                        <div class="input-group">
+                            <span><i class="fas fa-user" aria-hidden="true"></i></span>
+                            <input type="text" placeholder="Tên đăng nhập" id="tendn" name="tendn">
+                        </div>
+                        <div class="input-group">
+                            <span><i class="fas fa-key" aria-hidden="true"></i></span>
+                            <input type="Password" placeholder="Mật khẩu" id="matkhau" name="matkhau">
+                        </div>
+                        @*<div class="form-row bottom">
+                            <span>@ViewBag.tb</span>
+                            <a href="#url" class="forgot">Quên mật khẩu</a>
+                        </div>*@
+                        <input class="btn btn-primary btn-block" style="background: #CE6D06" type="submit" value="Đăng nhập">
+                    </form>
+                    <p class="continue"><span>or Login with</span></p>
+                    <div class="social-login">
+                        <a href="#facebook">
+                            <div class="facebook">
+                                <span class="fab fa-facebook-f" aria-hidden="true"></span>
+                            </div>
+                        </a>
+                        <a href="#twitter">
+                            <div class="twitter">
+                                <span class="fab fa-twitter" aria-hidden="true"></span>
+                            </div>
+                        </a>
+                        <a href="#google">
+                            <div class="google">
+                                <span class="fab fa-google" aria-hidden="true"></span>
+                            </div>
+                        </a>
+                    </div>
+                    <p>@ViewBag.tb</p>
+                    <p class="account"> <a href="/DangKy/XuLyDangKy">Đăng ký</a></p>
+                </div>
+            </div>
+            <!-- //main content -->
+        </div>
+        <!-- //container -->
+        <!-- footer -->
+        @*<div class="footer">
+            <p>
+                &copy; 2020 Service login form. All Rights Reserved | Design by <a href="https://w3layouts.com/"
+                                                                                   target="blank">W3layouts</a>
+            </p>
+        </div>*@
+        <!-- footer -->
+    </div>
+    <!-- fontawesome v5-->
+    <script src="js/fontawesome.js"></script>
+</body>
+</html>
+

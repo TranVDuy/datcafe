@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 9.5" name="qlduycoffee">
+  <DataContextMoniker Name="/qlduycoffeeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="8c54a8da-d955-4f7d-8d53-d6a09e5365f6" absoluteBounds="6.25, 1.375, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/qlduycoffeeDataContext/ChiTietHD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c56bd665-e042-4e6b-90b8-508acfc08966" absoluteBounds="6.265, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="58d8914d-faff-4996-be37-0c3d7a44a6db" absoluteBounds="3.5, 6.125, 2, 3.1170068359375014">
+      <DataClassMoniker Name="/qlduycoffeeDataContext/SanPham" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d9601e8-f66f-48e5-8661-683c37dc5a2d" absoluteBounds="3.515, 6.585, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ca010f8f-18d6-4177-8550-c01cb5c99995" absoluteBounds="6.75, 4.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/qlduycoffeeDataContext/DangNhap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0237a787-acd6-45d5-9249-61375cc46ca9" absoluteBounds="6.765, 5.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="03ba0b7a-6e6c-4c2c-9b68-bfb71baa8e2a" absoluteBounds="3.5, 1.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/qlduycoffeeDataContext/HoaDon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="83e0eb5d-5ee3-4cd6-b906-8b0106abe1e1" absoluteBounds="3.515, 1.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="101a67c8-f008-4595-9a85-6499ff99f093" absoluteBounds="0.75, 1, 2, 2.5401025390625005">
+      <DataClassMoniker Name="/qlduycoffeeDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="87308609-a559-4d3b-8e97-abb57480d78d" absoluteBounds="0.765, 1.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a0c9a3ff-86ca-47c3-b97d-c017bfd95ec7" absoluteBounds="0.75, 7, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/qlduycoffeeDataContext/Loai" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b396d8c2-dc64-4e6e-bf02-dba35f9e88db" absoluteBounds="0.765, 7.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 7.720400390625); (6.46875 : 7.720400390625); (6.46875 : 3.14589680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlduycoffeeDataContext/SanPham/SanPham_ChiTietHD" />
+      <nodes>
+        <classShapeMoniker Id="58d8914d-faff-4996-be37-0c3d7a44a6db" />
+        <classShapeMoniker Id="8c54a8da-d955-4f7d-8d53-d6a09e5365f6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.16429768880208); (6.25 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlduycoffeeDataContext/HoaDon/HoaDon_ChiTietHD" />
+      <nodes>
+        <classShapeMoniker Id="03ba0b7a-6e6c-4c2c-9b68-bfb71baa8e2a" />
+        <classShapeMoniker Id="8c54a8da-d955-4f7d-8d53-d6a09e5365f6" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.16429768880208); (3.5 : 2.16429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlduycoffeeDataContext/KhachHang/KhachHang_HoaDon" />
+      <nodes>
+        <classShapeMoniker Id="101a67c8-f008-4595-9a85-6499ff99f093" />
+        <classShapeMoniker Id="03ba0b7a-6e6c-4c2c-9b68-bfb71baa8e2a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 7.59699625651042); (3.5 : 7.59699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/qlduycoffeeDataContext/Loai/Loai_SanPham" />
+      <nodes>
+        <classShapeMoniker Id="a0c9a3ff-86ca-47c3-b97d-c017bfd95ec7" />
+        <classShapeMoniker Id="58d8914d-faff-4996-be37-0c3d7a44a6db" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

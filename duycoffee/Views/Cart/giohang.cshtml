@@ -1,0 +1,108 @@
+﻿@using duycoffee.Models
+
+@{
+    ViewBag.Title = "giohang";
+    Layout = "~/Views/LayoutCoffee/LC.cshtml";
+}
+
+    <section class="w3l-about-breadcrumb">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+            <div class="container py-lg-4 py-md-3">
+                <h2 class="title">Cart</h2>
+            </div>
+        </div>
+    </section>
+    
+<section class="w3l-servicesblock py-5" id="who">
+    <div class="container py-lg-5 py-md-4 py-2">
+        <div class="row">
+            <div class="col-lg-4 about-right-faq align-self">
+                
+                @{Html.RenderAction("Loai", "Menu");}
+               
+                
+            </div>
+
+            <div class="col-lg-4 about-right-faq align-self">
+
+                <div class="row">
+                    <table>
+                        @{
+                            if (!object.ReferenceEquals(Session["gh"], null))
+                            {
+                                GioHangDO gh = (GioHangDO)Session["gh"];
+                                int i = 1;
+                                foreach (GioHang item in gh.ds)
+                                {
+
+                                    <tr>
+                                        <th><span style="color: red">@i </span></th>
+                                        <td>@item.Ten</td>
+                                        <td>
+                                            <form action="/Cart/Sua?ma=@item.Ma" method="post">
+                                                <input type="number" name="soluong" min="1" value="@item.Soluong">
+                                                <input type="submit" value="thay đổi" />
+                                            </form>
+                                        </td>
+                                        <td>@item.GiaHT</td>
+                                        <td>
+                                            <a href="/Cart/Xoa?ma=@item.Ma">
+                                                <img src="~/Content/Cart/images/close1.png"/>
+                                            </a>
+                                        </td>
+                                        
+                                    </tr>
+
+                                    i++;
+                                }
+                                
+                                long total = 0;
+                                foreach (GioHang item in gh.ds)
+                                {
+                                    total = total + item.ThanhTien;
+                                }
+                             
+                                <tr>
+                                    <td>Tổng:</td>
+                                    <td></td>
+                                    <td></td>
+                                    <th><span style="color:red">@total</span></th>
+                                </tr>
+                            }
+                            else
+                            {
+                                <h3 style="text-align: center">@ViewBag.tb</h3>
+                            }
+                        }
+                    </table>
+                </div>
+
+
+            </div>
+
+            <div class="col-lg-4 about-right-faq align-self">
+
+                <form action="" method="get" style="display: inline">
+                    <input type="text" name="code" placeholder="Địa chỉ của bạn" />
+                    <input type="submit" value="OK" />
+                </form>
+
+
+            </div>
+
+
+            <div class="col-lg-4 about-right-faq align-self">
+
+                <form action="" method="get" style="display: inline">
+                    <input type="text" name="code" placeholder="Nhập mã giảm giá"/>
+                    <input type="submit" value="OK"/>
+                </form>
+
+
+            </div>
+           
+        </div>
+    </div>
+</section>
+
+@{ Html.RenderAction("CoTheBanThich", "Cart");}
